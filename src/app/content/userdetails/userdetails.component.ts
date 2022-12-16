@@ -5,7 +5,10 @@ import { UserService } from 'src/app/user.service';
 @Component({
   selector: 'app-userdetails',
   templateUrl: './userdetails.component.html',
-  styleUrls: ['./userdetails.component.css'],
+  styleUrls: [
+    '../adduser/adduser.component.css',
+    './userdetails.component.css',
+  ],
 })
 export class UserdetailsComponent {
   user: { name: string; number: number; address: string } | undefined;
@@ -17,8 +20,8 @@ export class UserdetailsComponent {
   ) {}
 
   ngOnInit() {
-    const name = this.route.snapshot.params['name'];
-    this.user = this.getUserService.getUser('name');
+    // const name = this.route.snapshot.params['name'];
+    // this.user = this.getUserService.getUser(name);
     this.route.params.subscribe((params) => {
       this.user = this.getUserService.getUser(params['name']);
     });
