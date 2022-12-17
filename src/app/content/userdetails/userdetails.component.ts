@@ -26,4 +26,7 @@ export class UserdetailsComponent {
       this.user = this.getUserService.getUser(params['name']);
     });
   }
+  delete() {
+    this.getUserService.deleteUser(this.user?.name);
+  }
 }

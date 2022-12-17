@@ -9,7 +9,7 @@ import { UserService } from 'src/app/user.service';
 })
 export class AdduserComponent {
   public users: { name: string; number: number; address: string }[] = [];
-  @ViewChild('closebutton') closebutton: ElementRef | undefined;
+  @ViewChild('closebutton') closebutton: ElementRef;
 
   constructor(private getUser: UserService) {}
 

@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root',
 })
@@ -28,7 +28,7 @@ export class UserService {
       Newark, NJ 07102`,
     },
   ];
-  constructor() {}
+  constructor(private router: Router) {}
 
   getUsers() {
     return this.users;
@@ -48,6 +48,15 @@ export class UserService {
       address,
     };
     this.users.push(user);
+  }
+
+  deleteUser(name: string | undefined) {
+    const index = this.users.findIndex((object) => {
+      return object.name === name;
+    });
+
+    this.users.splice(index, 1);
+    this.router.navigate(['/', 'users']);
   }
 
   disableImg() {
