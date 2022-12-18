@@ -24,6 +24,8 @@ export class AdduserComponent {
       data.form.value.number,
       data.form.value.address
     );
+    data.resetForm();
+    // console.log(data.form.value);
     this.closebutton?.nativeElement.click();
   }
 }
