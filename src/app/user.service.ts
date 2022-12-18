@@ -49,6 +49,20 @@ export class UserService {
     };
     this.users.push(user);
   }
+  editUser(findname: string, name: string, number: number, address: string) {
+    const index = this.users.findIndex((object) => {
+      return object.name === findname;
+    });
+    let user = {
+      name,
+      number,
+      address,
+    };
+    // this.users.splice(index, 1, user);
+    this.users[index] = user;
+    console.log(user);
+    console.log(this.users);
+  }
 
   deleteUser(name: string | undefined) {
     const index = this.users.findIndex((object) => {
