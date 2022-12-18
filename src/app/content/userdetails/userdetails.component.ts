@@ -32,6 +32,7 @@ export class UserdetailsComponent {
     this.route.params.subscribe((params) => {
       this.user = this.getUserService.getUser(params['name']);
     });
+    this.getUserService.usersUpdated.subscribe((s) => (this.user = s));
   }
   delete() {
     this.getUserService.deleteUser(this.user?.name);

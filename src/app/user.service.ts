@@ -1,10 +1,16 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+export interface user {
+  name: string;
+  number: number;
+  address: string;
+}
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
   isTrue = new EventEmitter<boolean>();
+  usersUpdated = new EventEmitter<user>();
   users = [
     {
       name: 'Max',
@@ -60,6 +66,7 @@ export class UserService {
     };
     // this.users.splice(index, 1, user);
     this.users[index] = user;
+    this.usersUpdated.emit(user);
     console.log(user);
     console.log(this.users);
   }
