@@ -18,7 +18,7 @@ export class AdduserComponent {
   }
 
   onSubmit(data: NgForm) {
-    console.log(data.form.value);
+    console.log(data.form.value.name);
     this.getUser.updateUser(
       data.form.value.name,
       data.form.value.number,
