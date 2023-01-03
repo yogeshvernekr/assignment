@@ -18,6 +18,7 @@ hr {
   line-height: 40px;
   /* text-align: center; */
   padding-top: 10px;
+  font-size: 22px;
 }
 
 .sidebar-nav {
@@ -27,7 +28,7 @@ hr {
   display: block;
   text-decoration: none;
   color: #999999;
-  font-size: 22px;
+  padding: 10px 0px;
 }
 
 .sidebar-nav li a:hover {
@@ -43,15 +44,15 @@ hr {
 
 .sidebar-nav > .sidebar-brand {
   height: 65px;
-  font-size: 25px;
-  line-height: 60px;
+  font-size: 24px;
+  /* line-height: 60px; */
   /* text-align: center; */
-  padding-top: 10px;
+  /* padding-top: 10px; */
 }
 
 .sidebar-nav > .sidebar-brand a {
   color: #999999;
-  text-indent: 15px;
+  text-indent: 23px;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
@@ -60,6 +61,7 @@ hr {
 }
 
 #sidebar-wrapper {
-  width: 300px;
-  height: 100vh;
+  width: 260px;
+  /* height: 100vh; */
+  min-height: 100vh;
 }

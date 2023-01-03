@@ -13,3 +13,7 @@
 nav.navbar {
   padding: 10px 20px;
 }
+
+.navbar-brand {
+  font-size: 23px !important;
+}

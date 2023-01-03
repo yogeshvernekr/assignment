@@ -8,8 +8,4 @@ import { UserService } from '../user.service';
 })
 export class SidebarComponent {
   constructor(private UserService: UserService) {}
-
-  onClick() {
-    this.UserService.disableImg();
-  }
 }

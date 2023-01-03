@@ -1,14 +1,9 @@
 <div class="rowss">
   <div>
     <ul class="list-group">
+      <li class="list-group-item bg-dark">Users</li>
       <li
-        class="list-group-item bg-dark"
-        style="text-align: center; color: white"
-      >
-        <h5>Users</h5>
-      </li>
-      <li
-        class="list-group-item"
+        class="list-group-item username"
         *ngFor="let user of users"
         routerLink="{{ user.name }}"
         routerLinkActive="active"
