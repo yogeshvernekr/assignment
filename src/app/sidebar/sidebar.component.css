@@ -63,5 +63,5 @@ hr {
 #sidebar-wrapper {
   width: 260px;
   /* height: 100vh; */
-  min-height: 100vh;
+  height: calc(100vh - 75px);
 }
