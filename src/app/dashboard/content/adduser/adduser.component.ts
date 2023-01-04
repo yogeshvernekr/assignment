@@ -18,11 +18,11 @@ export class AdduserComponent {
   }
 
   onSubmit(data: NgForm) {
-    console.log(data.form.value.name);
+    console.log(data.controls['number'].value);
     this.getUser.updateUser(
-      data.form.value.name,
-      data.form.value.number,
-      data.form.value.address
+      data.controls['name'].value,
+      data.control.value.number,
+      data.control.value.address
     );
     data.resetForm();
     // console.log(data.form.value);

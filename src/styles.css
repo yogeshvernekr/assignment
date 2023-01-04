@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  background-color: grey;
+  background-color: #303030;
+}
+
+.bg-dark,
+.btn-outline-dark:hover {
+  background-color: #1f1f1f !important;
 }

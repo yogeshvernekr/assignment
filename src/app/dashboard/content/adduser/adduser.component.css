@@ -33,6 +33,10 @@
 }
 
 .list-group-item.active {
-  background-color: #25292c !important;
-  border-color: #25292c !important;
+  background-color: #1f1f1fa4 !important;
+  border-color: #1f1f1fa4 !important;
+}
+
+.list-group-item {
+  background-color: #ffffffbd;
 }

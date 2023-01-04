@@ -1,0 +1,140 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #121212 !important; /* fallback for old browsers */
+  overflow-x: hidden;
+
+  height: 100%;
+
+  /* code to make all text unselectable */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* Disables selector ring */
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #1f1f1f inset !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.555) !important;
+}
+
+/* ########################################################## */
+
+h1 {
+  color: white;
+
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.flex-container {
+  width: 100vw;
+
+  margin-top: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container {
+  width: 500px;
+  height: 350px;
+}
+
+.form-container {
+  position: absolute;
+  top: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 500px;
+  height: 440px;
+
+  margin-top: 5px;
+  padding-top: 20px;
+
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  background: #1f1f1f;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.199);
+}
+
+.subtitle {
+  font-size: 11px;
+
+  color: rgba(177, 177, 177, 0.3);
+}
+
+input {
+  border: none;
+  border-bottom: solid rgb(143, 143, 143) 1px;
+
+  margin-bottom: 30px;
+
+  background: none;
+  color: rgba(255, 255, 255, 0.555);
+
+  height: 35px;
+  width: 300px;
+}
+
+textarea:focus,
+button:focus,
+select:focus,
+input:focus {
+  outline: none;
+}
+
+.submit-btn {
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+
+  box-shadow: none;
+
+  background: #2c2e2d;
+  color: rgb(218, 211, 211);
+  padding: 8px 16px;
+
+  /* width: 100%; */
+}
+
+.submit-btn:hover {
+  color: rgba(255, 255, 255, 0.8);
+  box-shadow: 2px 2px 7px #b0bbb770;
+
+  /* transition: ease-out 0.5s; */
+}
+
+input.ng-invalid.ng-touched {
+  border-bottom: 1px solid red;
+}
