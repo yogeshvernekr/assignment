@@ -43,6 +43,7 @@ export class AuthComponent {
           this.router.navigate(['/dashboard']);
         } else {
           this.signUpMessage = 'You have successfully signed up';
+          this.isLogin = true;
         }
         this.isLoading = false;
       },
