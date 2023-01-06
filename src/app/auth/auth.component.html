@@ -1,6 +1,6 @@
 <div class="content-container">
   <app-alert
-    [message]="error || signUpMessage"
+    [message]="error || signUpMessage || 'test'"
     *ngIf="error || signUpMessage"
   ></app-alert>
 

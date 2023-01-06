@@ -8,15 +8,9 @@
   z-index: 50;
 }
 
-.alert-box {
-  position: fixed;
-  top: 30vh;
-  left: 20vw;
-  width: 60vw;
-  padding: 16px;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  z-index: 51;
+.alertbox {
+  display: flex;
+  justify-content: center;
 }
 
 .alert-box-actions {
