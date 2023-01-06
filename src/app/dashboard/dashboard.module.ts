@@ -21,6 +21,8 @@ import { UserResolverService } from './content/user-resolver.service';
         path: '',
         component: DashboardComponent,
         children: [
+          { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+
           { path: 'dashboard', component: EmptyComponent },
           {
             path: 'users',
