@@ -19,6 +19,9 @@ export class AuthComponent {
 
   onSwitchMode(authForm: NgForm) {
     this.isLogin = !this.isLogin;
+    this.error = null;
+    this.signUpMessage = null;
+
     authForm.reset();
   }
 
@@ -26,6 +29,8 @@ export class AuthComponent {
     this.emailCheck = authForm.value;
     const email = authForm.value.email;
     const password = authForm.value.password;
+    this.error = null;
+    this.signUpMessage = null;
 
     this.isLoading = true;
 
@@ -53,8 +58,5 @@ export class AuthComponent {
         this.isLoading = false;
       },
     });
-    // setTimeout(() => {
-    //   authForm.reset();
-    // }, 3000);
   }
 }

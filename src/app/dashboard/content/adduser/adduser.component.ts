@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NgForm, NumberValueAccessor } from '@angular/forms';
-import { UserService } from 'src/app/user.service';
+import { ActivatedRoute } from '@angular/router';
+import { UserService, user } from 'src/app/user.service';
 
 @Component({
   selector: 'app-adduser',
@@ -8,21 +9,33 @@ import { UserService } from 'src/app/user.service';
   styleUrls: ['./adduser.component.css'],
 })
 export class AdduserComponent {
-  public users: { name: string; number: number; address: string }[] = [];
+  public users: any;
   @ViewChild('closebutton') closebutton: ElementRef;
 
-  constructor(private getUser: UserService) {}
+  constructor(
+    private UserService: UserService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.users = this.getUser.getUsers();
+    // this.users = this.getUser.getUsers();
+    // this.route.data.subscribe((user) => {
+    //   this.users = user;
+    // });
+
+    this.route.data.subscribe((data: any) => {
+      let users = data.users;
+      this.UserService.retrieveUsers(users);
+    });
+    this.users = this.UserService.getUsers();
   }
 
   onSubmit(data: NgForm) {
     console.log(data.controls['number'].value);
-    this.getUser.updateUser(
-      data.controls['name'].value,
-      data.control.value.number,
-      data.control.value.address
+    this.UserService.addUser(
+      data.form.value.name,
+      data.form.value.number,
+      data.form.value.address
     );
     data.resetForm();
     // console.log(data.form.value);

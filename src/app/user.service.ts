@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { empty, map, tap } from 'rxjs';
 export interface user {
   name: string;
   number: number;
@@ -11,30 +13,18 @@ export interface user {
 export class UserService {
   isTrue = new EventEmitter<boolean>();
   usersUpdated = new EventEmitter<user>();
-  users = [
-    {
-      name: 'Max',
-      number: 84841563,
-      address: `2083 Prospect Street, NJ 08102`,
-    },
-    {
-      name: 'Harry',
-      number: 6548463105,
-      address: '533 Park Boulevard Lorimor, IA 50149 ',
-    },
-    {
-      name: 'Happy',
-      number: 6255883,
-      address: '460 Glendale Avenue, CA 91504 ',
-    },
-    {
-      name: 'Jerry',
-      number: 41563,
-      address: `2681 Desert Court
-      Newark, NJ 07102`,
-    },
-  ];
-  constructor(private router: Router) {}
+  users: user[];
+  constructor(private router: Router, private http: HttpClient) {}
+
+  fetchUsers() {
+    return this.http.get<user[]>(
+      'https://crud-auth-22e24-default-rtdb.asia-southeast1.firebasedatabase.app/users.json'
+    );
+  }
+
+  retrieveUsers(data: any) {
+    this.users = data;
+  }
 
   getUsers() {
     return this.users;
@@ -47,13 +37,19 @@ export class UserService {
     return server;
   }
 
-  updateUser(name: string, number: number, address: string) {
+  addUser(name: string, number: number, address: string) {
     let user = {
       name,
       number,
       address,
     };
     this.users.push(user);
+    this.http
+      .put(
+        'https://crud-auth-22e24-default-rtdb.asia-southeast1.firebasedatabase.app/users.json',
+        this.users
+      )
+      .subscribe(() => {});
   }
   editUser(findname: string, name: string, number: number, address: string) {
     const index = this.users.findIndex((object) => {
@@ -66,9 +62,13 @@ export class UserService {
     };
     // this.users.splice(index, 1, user);
     this.users[index] = user;
+    this.http
+      .put(
+        'https://crud-auth-22e24-default-rtdb.asia-southeast1.firebasedatabase.app/users.json',
+        this.users
+      )
+      .subscribe(() => {});
     this.usersUpdated.emit(user);
-    console.log(user);
-    console.log(this.users);
   }
 
   deleteUser(name: string | undefined) {
@@ -77,10 +77,12 @@ export class UserService {
     });
 
     this.users.splice(index, 1);
+    this.http
+      .put(
+        'https://crud-auth-22e24-default-rtdb.asia-southeast1.firebasedatabase.app/users.json',
+        this.users
+      )
+      .subscribe(() => {});
     this.router.navigate(['/', 'users']);
-  }
-
-  disableImg() {
-    this.isTrue.emit(true);
   }
 }

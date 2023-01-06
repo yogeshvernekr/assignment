@@ -12,7 +12,7 @@ export class NotfoundComponent implements OnInit {
     // document.body.style.backgroundColor = '#081421';
 
     setTimeout(() => {
-      this.router.navigate(['']);
+      this.router.navigate(['/dashboard']);
     }, 5000);
   }
 }

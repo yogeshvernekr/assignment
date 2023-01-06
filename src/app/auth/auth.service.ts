@@ -35,6 +35,9 @@ export class AuthService {
         break;
       case 'EMAIL_NOT_FOUND':
         errorMessage = 'This email/password Incorrect';
+        break;
+      case 'INVALID_PASSWORD':
+        errorMessage = 'This email/password Incorrect';
     }
     throw new Error(errorMessage);
   }
