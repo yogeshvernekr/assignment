@@ -1,27 +1,26 @@
 <div class="rowss">
-  <div>
-    <ul class="list-group">
-      <li class="list-group-item bg-dark">Users</li>
-      <li
-        class="list-group-item username"
-        *ngFor="let user of users"
-        routerLink="{{ user.name }}"
-        routerLinkActive="active"
+  <ul class="list-group">
+    <li class="list-group-item bg-dark">Users</li>
+    <li
+      class="list-group-item username"
+      *ngFor="let user of users"
+      routerLink="{{ user.name }}"
+      routerLinkActive="active"
+    >
+      {{ user.name }}
+    </li>
+    <li class="list-group-item">
+      <button
+        class="btn btn-outline-dark btn-block"
+        data-toggle="modal"
+        data-target="#exampleModal"
       >
-        {{ user.name }}
-      </li>
-      <li class="list-group-item">
-        <button
-          class="btn btn-outline-dark btn-block"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          Add User
-        </button>
-      </li>
-    </ul>
-  </div>
-  <router-outlet></router-outlet>
+        Add User
+      </button>
+    </li>
+  </ul>
+
+  <!-- <router-outlet></router-outlet> -->
 </div>
 
 <div

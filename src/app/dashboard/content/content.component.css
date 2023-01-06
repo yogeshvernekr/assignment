@@ -2,9 +2,39 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
 }
 
 .disabled {
   display: none;
+}
+
+.mobile-nav {
+  left: 0px;
+  border-top: 1px solid #393b40;
+  background: #22242a;
+  position: fixed;
+  bottom: 0;
+  height: 65px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 1px 5px 0 #0d0d0d;
+}
+.mobile-nav a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: whitesmoke;
+  gap: 10px;
+}
+.mobile-nav span {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
 }

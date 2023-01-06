@@ -137,3 +137,9 @@ input:focus {
 input.ng-invalid.ng-touched {
   border-bottom: 1px solid red;
 }
+
+@media screen and (max-width: 768px) {
+  .form-container {
+    box-shadow: none;
+  }
+}

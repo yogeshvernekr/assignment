@@ -1,9 +1,15 @@
 .wrapper {
-  display: grid;
-  grid-template-columns: 300px 1fr;
+  display: flex;
 }
-/* 
-.sidebar {
-  height: 100vh;
-  background-color: aqua;
-} */
+
+.content {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

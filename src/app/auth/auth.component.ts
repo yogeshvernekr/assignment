@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthResponseData, AuthService } from './auth.service';
 import { Observable } from 'rxjs';
@@ -9,13 +9,27 @@ import { Router } from '@angular/router';
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css'],
 })
-export class AuthComponent {
+export class AuthComponent implements OnInit, OnDestroy {
+  bodyTag: HTMLBodyElement = document.getElementsByTagName('body')[0];
+  htmlTag: HTMLElement = document.getElementsByTagName('html')[0];
   isLogin = true;
   isLoading = false;
   error: string;
   signUpMessage: string;
   emailCheck: any;
   constructor(private auth: AuthService, private router: Router) {}
+
+  ngOnInit() {
+    // add the css-style to the html and body tags
+    this.bodyTag.classList.add('login-page');
+    this.htmlTag.classList.add('login-page');
+  }
+
+  ngOnDestroy() {
+    // remove the the body classes
+    this.bodyTag.classList.remove('login-page');
+    this.htmlTag.classList.remove('login-page');
+  }
 
   onSwitchMode(authForm: NgForm) {
     this.isLogin = !this.isLogin;

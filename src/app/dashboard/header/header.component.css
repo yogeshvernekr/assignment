@@ -18,3 +18,23 @@ nav.navbar {
 .navbar-brand {
   font-size: 23px !important;
 }
+
+.navbar-toggler > .nav-link {
+  padding: 0px;
+}
+
+.navbar-toggler {
+  padding: 0px;
+}
+
+.dropdown-item.mobile {
+  padding: 15px !important;
+  background-color: #1f1f1f !important;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.dropdown-menu-right.mobile {
+  left: 0px !important;
+  background-color: #1f1f1f !important;
+}

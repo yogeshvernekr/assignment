@@ -15,15 +15,14 @@ import { AdduserComponent } from './adduser.component';
       {
         path: '',
         component: AdduserComponent,
-        children: [
-          {
-            path: ':name',
-            loadChildren: () =>
-              import('../userdetails/userdetail.module').then(
-                (m) => m.UserDetailsModule
-              ),
-          },
-        ],
+      },
+
+      {
+        path: ':name',
+        loadChildren: () =>
+          import('../userdetails/userdetail.module').then(
+            (m) => m.UserDetailsModule
+          ),
       },
     ]),
   ],

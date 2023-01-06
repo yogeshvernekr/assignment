@@ -16,8 +16,32 @@
     aria-controls="navbarNav"
     aria-expanded="false"
     aria-label="Toggle navigation"
+    style="border: none"
   >
-    <span class="navbar-toggler-icon"></span>
+    <a
+      class="nav-link dropdown-toggle open"
+      href="#"
+      id="navbarDropdownMenuLink"
+      role="button"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <img
+        src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg"
+        width="40"
+        height="40"
+        class="rounded-circle"
+      />
+    </a>
+    <div
+      class="dropdown-menu dropdown-menu-right mobile"
+      aria-labelledby="navbarDropdownMenuLink"
+    >
+      <a class="dropdown-item mobile" href="login" (click)="logOut()"
+        >Log Out</a
+      >
+    </div>
   </button>
   <div class="collapse navbar-collapse" id="navbar-list-4">
     <ul class="navbar-nav">
