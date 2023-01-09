@@ -1,0 +1,70 @@
+.flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.center {
+  /* display: flex; */
+  justify-content: center;
+  width: 90%;
+  /* text-align: center; */
+  background-color: gainsboro;
+}
+
+#line-charts,
+#bar-charts {
+  min-height: 350px;
+}
+
+.flex-wrapper {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  flex-direction: column;
+}
+.flex-wrapper::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.flex-wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.items-sold {
+  width: 90%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.item {
+  border-top: 5px solid #b66d29;
+  flex-grow: 1;
+  /* flex-basis: 0; */
+  width: auto;
+  height: 100%;
+  background-color: gainsboro;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+span {
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+span.number {
+  font-weight: 300;
+  font-size: 18px;
+}

@@ -5,8 +5,9 @@ import { ContentComponent } from './content/content.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 
-import { EmptyComponent } from './content/empty.component';
 import { UserResolverService } from './content/user-resolver.service';
+import { ChartsComponent } from './charts/charts.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { UserResolverService } from './content/user-resolver.service';
     ContentComponent,
     SidebarComponent,
     HeaderComponent,
+    ChartsComponent,
   ],
   imports: [
     RouterModule.forChild([
@@ -23,7 +25,7 @@ import { UserResolverService } from './content/user-resolver.service';
         children: [
           { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
 
-          { path: 'dashboard', component: EmptyComponent },
+          { path: 'dashboard', component: ChartsComponent },
           {
             path: 'users',
             loadChildren: () =>
