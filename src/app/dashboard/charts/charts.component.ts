@@ -28,6 +28,7 @@ export class ChartsComponent implements AfterContentInit, OnDestroy {
       am4core.useTheme(am4themes_material);
 
       let chart = am4core.create('line-charts', am4charts.XYChart);
+      chart.responsive.enabled = true;
       let title = chart.titles.create();
       title.text = 'Product Sales By Area';
 
@@ -63,6 +64,12 @@ export class ChartsComponent implements AfterContentInit, OnDestroy {
           boats: 50,
         },
       ];
+      for (let i = 0; i < data.length; i++) {
+        this.totalComputers += data[i]['computers'];
+
+        this.totalBoats += data[i].boats;
+        this.totalCars += data[i].cars;
+      }
 
       chart.data = data;
       let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
@@ -76,11 +83,6 @@ export class ChartsComponent implements AfterContentInit, OnDestroy {
 
       let seriesNames = ['computers', 'cars', 'boats'];
       for (let i = 0; i < 3; i++) {
-        this.totalComputers += data[i]['computers'];
-
-        this.totalBoats += data[i].boats;
-        this.totalCars += data[i].cars;
-
         let series = chart.series.push(new am4charts.LineSeries());
         series.dataFields.categoryX = 'area';
         series.dataFields.valueY = seriesNames[i];
@@ -162,6 +164,11 @@ export class ChartsComponent implements AfterContentInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.zone.runOutsideAngular(() => {
+      if (this.chart) {
+        this.chart.dispose();
+      }
+    });
+    this.zone2.runOutsideAngular(() => {
       if (this.chart) {
         this.chart.dispose();
       }
