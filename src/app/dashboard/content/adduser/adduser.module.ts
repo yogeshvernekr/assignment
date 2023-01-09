@@ -4,9 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../../shared/shared.module';
 import { AdduserComponent } from './adduser.component';
+import { UserdetailsComponent } from '../userdetails/userdetails.component';
 
 @NgModule({
-  declarations: [AdduserComponent],
+  declarations: [AdduserComponent, UserdetailsComponent],
   imports: [
     SharedModule,
     CommonModule,
@@ -15,14 +16,12 @@ import { AdduserComponent } from './adduser.component';
       {
         path: '',
         component: AdduserComponent,
-      },
-
-      {
-        path: ':name',
-        loadChildren: () =>
-          import('../userdetails/userdetail.module').then(
-            (m) => m.UserDetailsModule
-          ),
+        children: [
+          {
+            path: ':name',
+            component: UserdetailsComponent,
+          },
+        ],
       },
     ]),
   ],
