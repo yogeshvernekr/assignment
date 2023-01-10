@@ -3,6 +3,11 @@
   padding: 20px;
   margin-top: 50px;
 }
+i.fa.fa-arrow-left {
+  float: left;
+  padding-top: 5px;
+  cursor: pointer;
+}
 
 @media only screen and (max-width: 768px) {
   .list-group {

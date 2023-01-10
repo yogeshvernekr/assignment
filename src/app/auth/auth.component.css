@@ -72,8 +72,6 @@ h1 {
 }
 
 .content-container {
-  width: 500px;
-  height: 350px;
   position: absolute;
   top: 40%;
   left: 50%;

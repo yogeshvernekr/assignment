@@ -1,4 +1,6 @@
 .center {
+  height: auto;
+  width: 70%;
   /* display: block;
   margin-left: auto;
   margin-right: auto; */
@@ -41,5 +43,23 @@
 @media screen and (min-width: 768px) {
   .mobile-nav {
     display: none;
+  }
+  .center {
+    height: auto;
+    width: 30%;
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+
+    position: static;
+    top: none;
+    left: none;
+    transform: none;
+  }
+  .notfound {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

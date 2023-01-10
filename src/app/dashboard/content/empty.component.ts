@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     <div class="notfound">
       <img
         class="center"
-        src="../../../assets/img/notfound.png"
+        src="../../../assets/img/notfound (1).png"
         width="400"
         height="400"
       />
