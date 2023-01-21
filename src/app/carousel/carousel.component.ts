@@ -14,7 +14,7 @@ SwiperCore.use([Pagination]);
     [slidesPerView]="'auto'"
     [centeredSlides]="true"
     [loop]="true"
-    [spaceBetween]="30"
+    [spaceBetween]="20"
     [pagination]="{
       clickable: true
     }"
