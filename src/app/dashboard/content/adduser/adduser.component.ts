@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 import { NgForm, NumberValueAccessor } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { UserService, user } from 'src/app/user.service';
@@ -8,14 +8,26 @@ import { UserService, user } from 'src/app/user.service';
   templateUrl: './adduser.component.html',
   styleUrls: ['./adduser.component.scss'],
 })
-export class AdduserComponent {
+export class AdduserComponent implements AfterViewInit, OnDestroy{
   public users: any;
   @ViewChild('closebutton') closebutton: ElementRef;
 
   constructor(
     private UserService: UserService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private elementRef: ElementRef
   ) {}
+
+  ngAfterViewInit() {
+    this.elementRef.nativeElement.ownerDocument
+        .body.style.backgroundColor = 'white';
+}
+
+ngOnDestroy(): void {
+  this.elementRef.nativeElement.ownerDocument
+  .body.style.backgroundColor = '#303030';
+}
+
 
   ngOnInit() {
     // this.users = this.getUser.getUsers();

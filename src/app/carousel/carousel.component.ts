@@ -21,10 +21,9 @@ SwiperCore.use([Pagination]);
     [navigation]="true"
     class="mySwiper"
   >
-    <ng-template  swiperSlide><img routerLink="/dashboard" src="./assets/03.png" alt=""></ng-template
-    ><ng-template swiperSlide><img src="./assets/glamihr-2-scaled.png" alt=""></ng-template
-    ><ng-template swiperSlide><img src="./assets/optique-sonnet-home-background.png" alt=""></ng-template
-    >
+  <ng-template swiperSlide><img routerLink="/dashboard" src="./assets/glamihr-2-scaled.png" alt=""></ng-template>
+  <ng-template swiperSlide><img src="./assets/optique-sonnet-home-background.png" alt=""></ng-template>
+  <ng-template  swiperSlide><img  src="./assets/03.png" alt=""></ng-template>
   </swiper>`,
   styleUrls: ["./carousel.component.scss"],
   encapsulation: ViewEncapsulation.None

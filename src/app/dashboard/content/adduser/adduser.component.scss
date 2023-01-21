@@ -46,3 +46,32 @@
     width: 90%;
   }
 }
+
+.parent-wrapper{
+
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  
+  .category-wrapper{
+    font-weight: bold;
+    font-family: Helvetica;
+    display: flex;
+    justify-content: space-between;
+    width: 71%;
+    padding: 20px 0px 0px 0px;
+
+    span.red{
+      border-right: 1px solid #E2000F;
+      font-size: 14px;
+      }
+    span{
+      line-height: 19px;
+      text-align: center;
+    }
+
+    
+    
+  }   
+  
+}
