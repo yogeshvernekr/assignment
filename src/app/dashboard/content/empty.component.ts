@@ -12,6 +12,6 @@ import { Component } from '@angular/core';
       />
     </div>
   `,
-  styleUrls: ['./content.component.css'],
+  styleUrls: ['./content.component.scss'],
 })
 export class EmptyComponent {}

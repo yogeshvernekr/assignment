@@ -6,7 +6,7 @@ import { UserService, user } from 'src/app/user.service';
 @Component({
   selector: 'app-adduser',
   templateUrl: './adduser.component.html',
-  styleUrls: ['./adduser.component.css'],
+  styleUrls: ['./adduser.component.scss'],
 })
 export class AdduserComponent {
   public users: any;

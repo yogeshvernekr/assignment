@@ -8,6 +8,9 @@ import { AuthService } from './auth/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { FormsModule } from '@angular/forms';
+import Swiper from 'swiper';
+import { SwiperModule } from 'swiper/angular';
+// import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [AppComponent],

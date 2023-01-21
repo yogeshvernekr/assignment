@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-loading',
   template:
     '<div class="lds-ring"><div></div><div></div><div></div><div></div></div>',
-  styleUrls: ['./loading.component.css'],
+  styleUrls: ['./loading.component.scss'],
 })
 export class LoadingComponent {}

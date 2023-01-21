@@ -8,6 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { UserResolverService } from './content/user-resolver.service';
 import { ChartsComponent } from './charts/charts.component';
 import { FormsModule } from '@angular/forms';
+import { CarouselComponent } from '../carousel/carousel.component';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [

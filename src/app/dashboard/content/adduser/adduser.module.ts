@@ -5,10 +5,15 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../../shared/shared.module';
 import { AdduserComponent } from './adduser.component';
 import { UserdetailsComponent } from '../userdetails/userdetails.component';
+import { CarouselComponent } from 'src/app/carousel/carousel.component';
+import { SwiperModule } from 'swiper/angular';
+
 
 @NgModule({
-  declarations: [AdduserComponent, UserdetailsComponent],
+  declarations: [AdduserComponent, UserdetailsComponent,CarouselComponent],
   imports: [
+    SwiperModule,
+
     SharedModule,
     CommonModule,
     FormsModule,

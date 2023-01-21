@@ -7,8 +7,8 @@ import { UserService } from 'src/app/user.service';
   selector: 'app-userdetails',
   templateUrl: './userdetails.component.html',
   styleUrls: [
-    '../adduser/adduser.component.css',
-    './userdetails.component.css',
+    '../adduser/adduser.component.scss',
+    './userdetails.component.scss',
   ],
 })
 export class UserdetailsComponent {

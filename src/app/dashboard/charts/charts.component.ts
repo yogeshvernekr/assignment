@@ -13,7 +13,7 @@ import am4themes_material from '@amcharts/amcharts4/themes/material';
 @Component({
   selector: 'app-charts',
   templateUrl: './charts.component.html',
-  styleUrls: ['./charts.component.css'],
+  styleUrls: ['./charts.component.scss'],
 })
 export class ChartsComponent implements AfterContentInit, OnDestroy {
   private chart: am4charts.XYChart;
