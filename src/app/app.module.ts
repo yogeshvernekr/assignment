@@ -10,7 +10,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { FormsModule } from '@angular/forms';
 import Swiper from 'swiper';
 import { SwiperModule } from 'swiper/angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { CarouselComponent } from './carousel/carousel.component';
+import {DragDropModule} from '@angular/cdk/drag-drop'
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +27,8 @@ import { SwiperModule } from 'swiper/angular';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000',
     }),
+    BrowserAnimationsModule,
+    DragDropModule,
   ],
   providers: [UserService, AuthService],
   bootstrap: [AppComponent],

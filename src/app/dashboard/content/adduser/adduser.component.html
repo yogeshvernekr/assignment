@@ -1,6 +1,6 @@
 
 
-<div class="parent-wrapper">
+<!-- <div class="parent-wrapper">
   <div class="category-wrapper">
   <span>MEN</span>
   <span class="red"></span>
@@ -11,9 +11,19 @@
   <span>KIDS</span>
   </div>
 </div>
-<app-carousel></app-carousel>
+<app-carousel></app-carousel> -->
 
+<div class="picture-container" id="picture-container"  >
+  <img data-top="0" id="mydiv" (drag)="registerDragElement()"  data-left="0" src="https://s3.amazonaws.com/ooomf-com-files/eDLHCtzRR0yfFtU0BQar_sylwiabartyzel_themap.jpg"   />
+        <div class="controls">
+            <a href="javascript:void(0)" (click)="reposition()" class="pos">Reposition</a>
+            <a href="javascript:void(0)" class="save">Save Changes</a>
+        </div>
+</div>
 
+<div><span class="p-3">Parent X :{{defaultX}}</span><span class="p-3">Parent Y :{{defaultY}}</span><span class="p-3">Parent Bottom :{{defaultBottom}}</span>
+  <span class="p-3">Child X :{{childx}}</span><span  class="p-3">Child Y :{{childy}}</span><span  class="p-3">Child Bottom :{{childbottom}}</span>
+</div>
 
 
 <div class="rowss">
