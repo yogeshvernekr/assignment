@@ -13,6 +13,7 @@ import { SwiperModule } from 'swiper/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { CarouselComponent } from './carousel/carousel.component';
 import {DragDropModule} from '@angular/cdk/drag-drop'
+import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,11 +22,13 @@ import {DragDropModule} from '@angular/cdk/drag-drop'
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    NgxDaterangepickerMd.forRoot(),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000',
+     
     }),
     BrowserAnimationsModule,
     DragDropModule,

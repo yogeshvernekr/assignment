@@ -7,6 +7,7 @@ import { AdduserComponent } from './adduser.component';
 import { UserdetailsComponent } from '../userdetails/userdetails.component';
 import { CarouselComponent } from 'src/app/carousel/carousel.component';
 import { SwiperModule } from 'swiper/angular';
+import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 
 
 @NgModule({

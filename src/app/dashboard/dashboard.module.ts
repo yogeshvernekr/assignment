@@ -10,6 +10,9 @@ import { ChartsComponent } from './charts/charts.component';
 import { FormsModule } from '@angular/forms';
 import { CarouselComponent } from '../carousel/carousel.component';
 import { SwiperModule } from 'swiper/angular';
+import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
+import { SharedModule } from './shared/shared.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,8 +21,14 @@ import { SwiperModule } from 'swiper/angular';
     SidebarComponent,
     HeaderComponent,
     ChartsComponent,
+    
   ],
   imports: [
+    NgxDaterangepickerMd.forRoot(),
+    FormsModule,
+
+    SharedModule,
+    CommonModule,
     RouterModule.forChild([
       {
         path: '',

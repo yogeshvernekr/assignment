@@ -3,6 +3,7 @@ import { NgForm, NumberValueAccessor } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { UserService, user } from 'src/app/user.service';
 
+
 @Component({
   selector: 'app-adduser',
   templateUrl: './adduser.component.html',
@@ -22,16 +23,20 @@ export class AdduserComponent implements AfterViewInit, OnDestroy, AfterViewInit
   childright: any;
   defaultHeight: any;
 
+ 
+
   constructor(
     private UserService: UserService,
     private route: ActivatedRoute,
     private elementRef: ElementRef
   ) {}
 
+
+
   ngAfterViewInit() {
     this.elementRef.nativeElement.ownerDocument
         .body.style.backgroundColor = 'white';
-    // this.registerDragElement();
+    // this.registerDragElement();de
 
 }
 
